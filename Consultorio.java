@@ -67,6 +67,6 @@ public abstract class Consultorio {
    
     public abstract void setTelefone(String telefone);
 
-    public abstract consulta(Paciente paciente, Medico medico);
+    public abstract void consulta(Paciente paciente, Medico medico);
 
 }
