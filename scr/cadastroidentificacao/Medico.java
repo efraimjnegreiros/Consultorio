@@ -3,8 +3,7 @@ public class Medico extends Consultorio {
     private String especialidade;
     private String areaAtuacao;
 
-    public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, 
-                  String crmUf, String especialidade, String areaAtuacao) {
+    public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco,String crmUf, String especialidade, String areaAtuacao) {
         super(nome, cpf, idade, emailPessoal, endereco);
         this.crmUf = crmUf;
         this.especialidade = especialidade;

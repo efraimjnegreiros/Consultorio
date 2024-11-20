@@ -26,17 +26,14 @@ public abstract class Consultorio {
         return this.cpf;
     }
 
- 
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
 
     public int getIdade() {
         return this.idade;
     }
 
-  
     public void setIdade(int idade) {
         this.idade = idade;
     }
@@ -50,12 +47,10 @@ public abstract class Consultorio {
         this.emailPessoal = emailPessoal;
     }
 
-
     public String getEndereco() {
         return this.endereco;
     }
 
-  
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
@@ -63,8 +58,7 @@ public abstract class Consultorio {
     public String getTelefone() {
         return this.telefone;
     }
-
-   
+    
     public abstract void setTelefone(String telefone);
 
     public abstract void consulta(Paciente paciente, Medico medico);
