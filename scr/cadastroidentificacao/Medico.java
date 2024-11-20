@@ -43,7 +43,7 @@ public class Medico extends Consultorio {
     }
 
     public static void main(String[] args) {
-        Medico medico = new Medico("Dr. João", "123.456.789-00", 40, "joao@exemplo.com", "Rua A, 123", "CRM1234", "Cardiologista", "Hospital X");
+        Medico medico = new Medico("Dr. João", "123.456.789-00", 40, "joao@exemplo.com", "Rua A, 123", 1"CRM1234", "Cardiologista", "Hospital X");
         System.out.println("Médico: " + medico.getNome());
         System.out.println("Especialidade: " + medico.getEspecialidade());
     }
