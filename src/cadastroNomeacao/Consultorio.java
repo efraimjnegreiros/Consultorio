@@ -1,3 +1,5 @@
+package cadastroNomeacao;
+
 public abstract class Consultorio {
     private String nome;
     private String cpf;
