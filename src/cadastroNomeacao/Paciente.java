@@ -1,52 +1,56 @@
 package cadastroNomeacao;
 
 public class Paciente extends Consultorio {
-    private String numCNS;
+    private String num_CNS;
     private String doenca;
-    private float tempoDoenca;
-    private boolean direitoTeleconsulta;
+    private float tempo_doenca;
+    private boolean direito_teleconsulta;
 
-    public Paciente(String nome, String cpf, int idade, String emailPessoal, String endereco, String numCNS, String doenca, float tempoDoenca, boolean direitoTeleconsulta) {
-        super(nome, cpf, idade, emailPessoal, endereco);
-        this.numCNS = numCNS;
+    public Paciente(String num_CNS, String doenca, float tempo_doenca, boolean direito_teleconsulta, String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone) {
+        super(nome, cpf, idade, emailPessoal, endereco, telefone);
+        this.num_CNS = num_CNS;
         this.doenca = doenca;
-        this.tempoDoenca = tempoDoenca;
-        this.direitoTeleconsulta = direitoTeleconsulta;
+        this.tempo_doenca = tempo_doenca;
+        this.direito_teleconsulta = direito_teleconsulta;
     }
 
-    public String getNumCNS() {
-        return numCNS;
+    public String getNum_CNS() {
+        return this.num_CNS;
     }
 
-    public void setNumCNS(String numCNS) {
-        this.numCNS = numCNS;
+    public void setNum_CNS(String num_CNS) {
+        this.num_CNS = num_CNS;
     }
 
     public String getDoenca() {
-        return doenca;
+        return this.doenca;
     }
 
     public void setDoenca(String doenca) {
         this.doenca = doenca;
     }
 
-    public float getTempoDoenca() {
-        return tempoDoenca;
+    public float getTempo_doenca() {
+        return this.tempo_doenca;
     }
 
-    public void setTempoDoenca(float tempoDoenca) {
-        this.tempoDoenca = tempoDoenca;
+    public void setTempo_doenca(float tempo_doenca) {
+        this.tempo_doenca = tempo_doenca;
     }
 
-    public boolean isDireitoTeleconsulta() {
-        return direitoTeleconsulta;
+    public boolean isDireito_teleconsulta() {
+        return this.direito_teleconsulta;
     }
 
-    public void setDireitoTeleconsulta(boolean direitoTeleconsulta) {
-        this.direitoTeleconsulta = direitoTeleconsulta;
+    public void setDireito_teleconsulta(boolean direito_teleconsulta) {
+        this.direito_teleconsulta = direito_teleconsulta;
     }
 
-    public void consulta(Paciente paciente) {
-        System.out.println("Paciente não realiza consultas diretamente.");
+    public void setTelefone(String telefone) {
+        super.setTelefone(telefone);
+    }
+
+    public void consulta(Paciente paciente, Medico medico) {
+        System.out.println("O paciente " + this.getNome() + " está sendo atendido por " + medico.getNome());
     }
 }

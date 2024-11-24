@@ -7,5 +7,7 @@ public class Main {
         
         System.out.println("Médico: " + medico.getNome() + ", Especialidade: " + medico.getEspecialidade());
         System.out.println("Paciente: " + paciente.getNome() + ", Doença: " + paciente.getDoenca());
+        
+        medico.consulta(paciente, medico);
     }
 }
