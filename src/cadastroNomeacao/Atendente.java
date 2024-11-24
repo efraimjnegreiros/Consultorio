@@ -27,10 +27,10 @@ public class Atendente extends Consultorio {
     }
 
     public void setTelefone(String telefone) {
-        super.setTelefone(telefone);
+        super.telefone = telefone;
     }
 
-    public void consulta(Paciente paciente, Medico medico) {
-        System.out.println("O atendente " + this.getNome() + " está auxiliando no atendimento do paciente " + paciente.getNome());
+    public void consulta(Medico medico) {
+        System.out.println("O atendente " + this.getNome() + " está auxiliando no atendimento do paciente.");
     }
 }

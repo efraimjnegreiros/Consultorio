@@ -37,10 +37,10 @@ public class Medico extends Consultorio {
     }
 
     public void setTelefone(String telefone) {
-        super.setTelefone(telefone);
+        super.telefone = telefone;
     }
 
-    public void consulta(Paciente paciente, Medico medico) {
-        System.out.println("O médico " + this.getNome() + " está atendendo o paciente " + paciente.getNome());
+    public void consulta(Medico medico) {
+        System.out.println("O médico " + this.getNome() + " está atendendo o paciente.");
     }
 }
