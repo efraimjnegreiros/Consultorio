@@ -13,7 +13,7 @@ public class Medico extends Consultorio {
     }
 
     public String getCrmUf() {
-        return crmUf;
+        return this.crmUf;
     }
 
     public void setCrmUf(String crmUf) {
@@ -21,7 +21,7 @@ public class Medico extends Consultorio {
     }
 
     public String getEspecialidade() {
-        return especialidade;
+        return this.especialidade;
     }
 
     public void setEspecialidade(String especialidade) {
@@ -29,7 +29,7 @@ public class Medico extends Consultorio {
     }
 
     public String getAreaAtuacao() {
-        return areaAtuacao;
+        return this.areaAtuacao;
     }
 
     public void setAreaAtuacao(String areaAtuacao) {
@@ -40,7 +40,12 @@ public class Medico extends Consultorio {
         this.telefone = telefone;
     }
 
-    public void consulta(Medico medico) {
-        System.out.println("O médico " + this.getNome() + " está atendendo o paciente.");
+    public void consulta(Consultorio consultorio) {
+        if (consultorio instanceof Paciente) {
+            Paciente paciente = (Paciente) consultorio;
+            System.out.println("O médico " + this.getNome() + " está atendendo o paciente " + paciente.getNome());
+        } else {
+            System.out.println("Consulta inválida.");
+        }
     }
 }
