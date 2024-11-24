@@ -9,8 +9,8 @@ public class Main {
         medico.setTelefone("9876-1234");
         paciente.setTelefone("9876-4321");
 
-        medico.consulta(paciente);
         paciente.consulta(medico);
+        medico.consulta(paciente);
         atendente.consulta(medico);
     }
 }

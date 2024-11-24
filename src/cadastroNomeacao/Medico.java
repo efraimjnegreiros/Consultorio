@@ -13,7 +13,7 @@ public class Medico extends Consultorio {
     }
 
     public String getCrmUf() {
-        return this.crmUf;
+        return crmUf;
     }
 
     public void setCrmUf(String crmUf) {
@@ -21,7 +21,7 @@ public class Medico extends Consultorio {
     }
 
     public String getEspecialidade() {
-        return this.especialidade;
+        return especialidade;
     }
 
     public void setEspecialidade(String especialidade) {
@@ -29,7 +29,7 @@ public class Medico extends Consultorio {
     }
 
     public String getAreaAtuacao() {
-        return this.areaAtuacao;
+        return areaAtuacao;
     }
 
     public void setAreaAtuacao(String areaAtuacao) {
@@ -37,7 +37,7 @@ public class Medico extends Consultorio {
     }
 
     public void setTelefone(String telefone) {
-        super.telefone = telefone;
+        this.telefone = telefone;
     }
 
     public void consulta(Medico medico) {

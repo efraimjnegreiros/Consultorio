@@ -6,8 +6,8 @@ public abstract class Consultorio {
     private int idade;
     private String emailPessoal;
     private String endereco;
-    private String telefone;
-    
+    protected String telefone;
+
     public Consultorio(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone) {
         this.nome = nome;
         this.cpf = cpf;
@@ -18,7 +18,7 @@ public abstract class Consultorio {
     }
 
     public String getNome() {
-        return this.nome;
+        return nome;
     }
 
     public void setNome(String nome) {
@@ -26,7 +26,7 @@ public abstract class Consultorio {
     }
 
     public String getCpf() {
-        return this.cpf;
+        return cpf;
     }
 
     public void setCpf(String cpf) {
@@ -34,7 +34,7 @@ public abstract class Consultorio {
     }
 
     public int getIdade() {
-        return this.idade;
+        return idade;
     }
 
     public void setIdade(int idade) {
@@ -42,7 +42,7 @@ public abstract class Consultorio {
     }
 
     public String getEmailPessoal() {
-        return this.emailPessoal;
+        return emailPessoal;
     }
 
     public void setEmailPessoal(String emailPessoal) {
@@ -50,15 +50,11 @@ public abstract class Consultorio {
     }
 
     public String getEndereco() {
-        return this.endereco;
+        return endereco;
     }
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-
-    public String getTelefone() {
-        return this.telefone;
     }
 
     public abstract void setTelefone(String telefone);
