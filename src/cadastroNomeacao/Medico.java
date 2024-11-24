@@ -8,7 +8,7 @@ public class Medico extends Consultorio {
         this.crmUf = crmUf;
         this.especialidade = especialidade;
         this.areaAtuacao = areaAtuacao;
-    }
+    }    
 
     public String getCrmUf() {
         return this.crmUf;

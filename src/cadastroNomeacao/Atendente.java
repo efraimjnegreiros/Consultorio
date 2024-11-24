@@ -4,11 +4,11 @@ public class Atendente extends Consultorio{
     private int num_identificacao;
     private boolean trabalho_em_casa;
 
-    public Atendente(int num_identificacao, boolean trabalho_em_casa){
-        super(nome, cpf, idade, emailPessoal, endereco, telefone);
-        this.num_identificacao = num_identificacao;
-        this.trabalho_em_casa = trabalho_em_casa;
-    }
+	public Atendente(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone, int num_identificacao, boolean trabalho_em_casa) {
+		super(nome, cpf, idade, emailPessoal, endereco);
+		this.num_identificacao = num_identificacao;
+		this.trabalho_em_casa = trabalho_em_casa;
+	}	
 
     public int getNum_identificacao() {
 		return this.num_identificacao;

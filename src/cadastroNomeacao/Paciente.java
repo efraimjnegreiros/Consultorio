@@ -6,13 +6,13 @@ public class Paciente extends Consultorio{
     private float tempo_doenca;
     private boolean direito_teleconsulta;
 
-    public Paciente(String num_CNS, String doenca, float tempo_doenca, boolean direito_teleconsulta){
-        super(nome, cpf, idade, emailPessoal, endereco, telefone)
-        this.num_CNS = num_CNS;
-        this.doenca = doenca;
-        this.tempo_doenca = tempo_doenca;
-        this.direito_teleconsulta = direito_teleconsulta;
-    }
+	public Paciente(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone, String num_CNS, String doenca, float tempo_doenca, boolean direito_teleconsulta) {
+		super(nome, cpf, idade, emailPessoal, endereco);
+		this.num_CNS = num_CNS;
+		this.doenca = doenca;
+		this.tempo_doenca = tempo_doenca;
+		this.direito_teleconsulta = direito_teleconsulta;
+	}	
 
     public String getNum_CNS() {
 		return this.num_CNS;
