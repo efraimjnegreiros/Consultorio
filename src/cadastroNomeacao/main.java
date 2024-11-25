@@ -1,13 +1,39 @@
 package cadastroNomeacao;
 
-public class Main {
-    public static void main(String[] args) {
-        Medico medico = new Medico("Dr. João", "123.456.789-00", 40, "joao@gmail.com", "Rua 1", "CRM12345", "Cardiologia", "Clínico Geral");
-        Paciente paciente = new Paciente("123456789", "Hipertensão", 5.0f, true, "Maria", "987.654.321-00", 35, "maria@gmail.com", "Rua 2", "9999-9999");
-        Atendente atendente = new Atendente(101, true, "Carlos", "111.222.333-44", 28, "carlos@atendente.com", "Rua 3", "8888-8888");
+import java.util.Scanner;
 
-        medico.consulta(paciente);
-        paciente.consulta(medico);
-        atendente.consulta(paciente);
+public class Main{
+    public static void main(String[] args){
+        Scanner scanner = new scanner(System.in);
+
+        System.out.println("=== Cadastro do Médico ===");
+        Medico medico = new Medico(
+            input("Nome" , scanner),
+            input("CPF" , scanner),
+            integer.parseInt(input("Idade",scanner)),
+            
+            input("Email",scanner),
+            input("Endereço",scanner),
+            input("CRM/UF",scanner),
+            input("Espeialidade",scanner),
+            input("Área de atuação", scanner)
+        );
+
+        System.out.println("\n=== Cadastro do Paciente ===");
+        Paciente paciente = new Paciente(
+            input("Número CNS", scanner),
+            input("Doença",scanner),
+            Float.parseInt(input("Tempo de doença(em anos)",scanner))
+            Boolean.parseBoolean(input("DIreito a teleconsulta (true/false)",scanner)),
+            input("Nome",scanner),
+            input("CPF",scanner),
+            integer.parseInt(input("Idade",scanner)),
+            input("Email",scanner),
+            input("Endereço",scanner),
+            input("Telefone",scanner)
+        );
+
+        System.out.println("\n=== Cadastro do Atendente ===");
+        Atendente atendente = new
     }
 }
