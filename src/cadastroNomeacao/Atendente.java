@@ -10,22 +10,6 @@ public class Atendente extends Consultorio {
         this.trabalho_em_casa = trabalho_em_casa;
     }
 
-    public int getNum_identificacao() {
-        return this.num_identificacao;
-    }
-
-    public void setNum_identificacao(int num_identificacao) {
-        this.num_identificacao = num_identificacao;
-    }
-
-    public boolean isTrabalho_em_casa() {
-        return this.trabalho_em_casa;
-    }
-
-    public void setTrabalho_em_casa(boolean trabalho_em_casa) {
-        this.trabalho_em_casa = trabalho_em_casa;
-    }
-
     @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone;

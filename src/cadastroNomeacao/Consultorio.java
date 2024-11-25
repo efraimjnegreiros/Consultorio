@@ -14,7 +14,7 @@ public abstract class Consultorio {
         this.idade = idade;
         this.emailPessoal = emailPessoal;
         this.endereco = endereco;
-        this.telefone = telefone;
+        this.telefone = telefone != null ? telefone : "Sem telefone";
     }
 
     public String getNome() {
@@ -58,6 +58,6 @@ public abstract class Consultorio {
     }
 
     public abstract void setTelefone(String telefone);
-    
+
     public abstract void consulta(Consultorio consultorio);
 }
