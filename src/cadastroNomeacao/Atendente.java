@@ -10,12 +10,10 @@ public class Atendente extends Consultorio {
         this.trabalho_em_casa = trabalho_em_casa;
     }
 
-    @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
-    @Override
     public void consulta(Consultorio consultorio) {
         if (consultorio instanceof Paciente) {
             Paciente paciente = (Paciente) consultorio;

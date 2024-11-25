@@ -13,7 +13,7 @@ public class main {
         String cpfMedico = scanner.nextLine();
         System.out.print("Idade: ");
         int idadeMedico = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
         System.out.print("Email: ");
         String emailMedico = scanner.nextLine();
         System.out.print("Endereço: ");
@@ -34,7 +34,7 @@ public class main {
         String cpfPaciente = scanner.nextLine();
         System.out.print("Idade: ");
         int idadePaciente = scanner.nextInt();
-        scanner.nextLine(); 
+        scanner.nextLine();
         System.out.print("Email: ");
         String emailPaciente = scanner.nextLine();
         System.out.print("Endereço: ");
