@@ -34,6 +34,26 @@ public class Main{
         );
 
         System.out.println("\n=== Cadastro do Atendente ===");
-        Atendente atendente = new
+        Atendente atendente = new Atendente(
+            integer.parseInt(input("Número de identificação", scanner)),
+            Boolean.parseBoolean(input("Home office (true/false)", scanner)),
+            input("Nome",scanner),
+            input("CPF",scanner),
+            integer.parseInt(input("Idade",scanner)),
+            input("Email",scanner),
+            input("Endereco",scanner),
+            input("Telefone",scanner)
+        );
+
+        System.out.println("\n=== Resultados ===");
+        medico.consulta(paciente);
+        atendente.consulta(paciente,medico);
+
+        scanner.closse();
+
+        private static String input(String prompt, Scanner scanner){
+            System.out.println(prompt + ": ");
+            return scanner.nextLine();
+        }
     }
 }
