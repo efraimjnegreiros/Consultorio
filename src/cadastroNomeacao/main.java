@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("=== Cadastro do Médico ===");
         System.out.print("Nome: ");
         String nomeMedico = scanner.nextLine();
         System.out.print("CPF: ");
@@ -74,9 +75,10 @@ public class Main {
 
         Atendente atendente = new Atendente(numIdentificacao, trabalhoEmCasa, nomeAtendente, cpfAtendente, idadeAtendente, emailAtendente, enderecoAtendente, telefoneAtendente);
 
-        System.out.println("\n=== Interações ===");
+        System.out.println("\n=== Saidas ===");
         medico.consulta(paciente);
-        atendente.consulta(paciente, medico);
+        atendente.consulta(paciente);
+        atendente.consulta(medico);
 
         scanner.close();
     }
