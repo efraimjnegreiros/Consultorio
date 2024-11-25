@@ -58,6 +58,6 @@ public abstract class Consultorio {
     }
 
     public abstract void setTelefone(String telefone);
-
+    
     public abstract void consulta(Consultorio consultorio);
 }

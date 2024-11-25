@@ -46,10 +46,12 @@ public class Paciente extends Consultorio {
         this.direito_teleconsulta = direito_teleconsulta;
     }
 
+    @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
+    @Override
     public void consulta(Consultorio consultorio) {
         if (consultorio instanceof Medico) {
             Medico medico = (Medico) consultorio;

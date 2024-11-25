@@ -36,10 +36,12 @@ public class Medico extends Consultorio {
         this.areaAtuacao = areaAtuacao;
     }
 
+    @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
+    @Override
     public void consulta(Consultorio consultorio) {
         if (consultorio instanceof Paciente) {
             Paciente paciente = (Paciente) consultorio;
