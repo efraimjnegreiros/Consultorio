@@ -4,48 +4,38 @@ public class Medico extends Consultorio {
     private String crmUf;
     private String especialidade;
     private String areaAtuacao;
+    private String universidade;
+    private String curso;
+    private boolean apresentouArtigo;
 
-    public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, String crmUf, String especialidade, String areaAtuacao) {
-        super(nome, cpf, idade, emailPessoal, endereco, "");
+    public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone,
+    String crmUf, String especialidade, String areaAtuacao, String universidade, String curso, boolean apresentouArtigo) {
+        super(nome, cpf, idade, emailPessoal, endereco, telefone);
         this.crmUf = crmUf;
         this.especialidade = especialidade;
         this.areaAtuacao = areaAtuacao;
+        this.universidade = universidade;
+        this.curso = curso;
+        this.apresentouArtigo = apresentouArtigo;
     }
 
-    public String getCrmUf() {
-        return this.crmUf;
-    }
-
-    public void setCrmUf(String crmUf) {
-        this.crmUf = crmUf;
-    }
-
-    public String getEspecialidade() {
-        return this.especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
-    public String getAreaAtuacao() {
-        return this.areaAtuacao;
-    }
-
-    public void setAreaAtuacao(String areaAtuacao) {
-        this.areaAtuacao = areaAtuacao;
-    }
-
+    @Override
     public void setTelefone(String telefone) {
-        this.telefone = telefone;
+        this.telefone = telefone != null ? telefone : "Sem telefone";
     }
 
+    @Override
     public void consulta(Consultorio consultorio) {
-        if (consultorio instanceof Paciente) {
-            Paciente paciente = (Paciente) consultorio;
-            System.out.println("O médico " + this.getNome() + " está atendendo o paciente " + paciente.getNome());
-        } else {
-            System.out.println("Consulta inválida.");
-        }
+        System.out.println("Consulta realizada pelo médico " + this.getNome() +
+                           " (CRM: " + this.crmUf + "), especialista em " + this.especialidade +
+                           ". Paciente: " + consultorio.getNome());
+    }
+
+    public void apresentarDadosAcademicos() {
+        System.out.println("Dados Acadêmicos do Médico:");
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Universidade: " + this.universidade);
+        System.out.println("Curso: " + this.curso);
+        System.out.println("Apresentou Artigo? " + (this.apresentouArtigo ? "Sim" : "Não"));
     }
 }

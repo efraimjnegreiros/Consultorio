@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compilar Java",
+        "type": "shell",
+        "command": "javac src/cadastroNomeacao/*.java -d bin",
+        "group": "build",
+        "problemMatcher": ["$javac"],
+        "watch": true
+      }
+    ]
+  }
+  
