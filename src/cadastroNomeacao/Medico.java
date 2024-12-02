@@ -5,6 +5,7 @@ public class Medico extends Consultorio {
     private String especialidade;
     private String areaAtuacao;
     private Formacao formacao;
+
 // Se trata de uma agregação porque é parte do médico e não é essencial em uma consulta do médico
     public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone,
     String crmUf, String especialidade, String areaAtuacao, Formacao formacao) {
@@ -14,6 +15,39 @@ public class Medico extends Consultorio {
         this.areaAtuacao = areaAtuacao;
         this.formacao = formacao;
     }
+
+    public String getCrmUf() {
+		return this.crmUf;
+	}
+
+	public void setCrmUf(String crmUf) {
+		this.crmUf = crmUf;
+	}
+
+	public String getEspecialidade() {
+		return this.especialidade;
+	}
+
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
+
+	public String getAreaAtuacao() {
+		return this.areaAtuacao;
+	}
+
+	public void setAreaAtuacao(String areaAtuacao) {
+		this.areaAtuacao = areaAtuacao;
+	}
+
+	public Formacao getFormacao() {
+		return this.formacao;
+	}
+
+	public void setFormacao(Formacao formacao) {
+		this.formacao = formacao;
+	}
+
     @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone != null ? telefone : "Sem telefone";
