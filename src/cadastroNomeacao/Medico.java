@@ -7,7 +7,7 @@ public class Medico extends Consultorio {
     private String universidade;
     private String curso;
     private boolean apresentouArtigo;
-
+// Se trata de uma agregação porque é parte do médico e não é essencial em uma consulta do médico
     public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone,
     String crmUf, String especialidade, String areaAtuacao, String universidade, String curso, boolean apresentouArtigo) {
         super(nome, cpf, idade, emailPessoal, endereco, telefone);
