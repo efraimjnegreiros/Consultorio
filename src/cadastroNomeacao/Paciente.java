@@ -3,6 +3,7 @@ package cadastroNomeacao;
 import java.util.ArrayList;
 import java.util.List;
 
+// Se trata de uma agregação porque é parte do histórico do paciente e não é tão essencial em uma consulta
 public class Paciente extends Consultorio {
     private String num_CNS;
     private String doenca;
