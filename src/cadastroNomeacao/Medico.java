@@ -4,21 +4,16 @@ public class Medico extends Consultorio {
     private String crmUf;
     private String especialidade;
     private String areaAtuacao;
-    private String universidade;
-    private String curso;
-    private boolean apresentouArtigo;
+    private Formacao formacao;
 // Se trata de uma agregação porque é parte do médico e não é essencial em uma consulta do médico
     public Medico(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone,
-    String crmUf, String especialidade, String areaAtuacao, String universidade, String curso, boolean apresentouArtigo) {
+    String crmUf, String especialidade, String areaAtuacao, Formacao formacao) {
         super(nome, cpf, idade, emailPessoal, endereco, telefone);
         this.crmUf = crmUf;
         this.especialidade = especialidade;
         this.areaAtuacao = areaAtuacao;
-        this.universidade = universidade;
-        this.curso = curso;
-        this.apresentouArtigo = apresentouArtigo;
+        this.formacao = formacao;
     }
-
     @Override
     public void setTelefone(String telefone) {
         this.telefone = telefone != null ? telefone : "Sem telefone";
@@ -31,11 +26,12 @@ public class Medico extends Consultorio {
                            ". Paciente: " + consultorio.getNome());
     }
 
-    public void apresentarDadosAcademicos() {
-        System.out.println("Dados Acadêmicos do Médico:");
-        System.out.println("Nome: " + this.getNome());
-        System.out.println("Universidade: " + this.universidade);
-        System.out.println("Curso: " + this.curso);
-        System.out.println("Apresentou Artigo? " + (this.apresentouArtigo ? "Sim" : "Não"));
+    public void apresentarFormacao() {
+        if (formacao != null) {
+            formacao.printDadosAcademicos();
+        } else {
+            System.out.print("Nenhuma Formação Associada ao Médico");
+        }
+        
     }
 }
