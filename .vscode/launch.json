@@ -3,10 +3,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Java",
+            "name": "Executar Main",
             "request": "launch",
-            "mainClass": "Medico",
-            "projectName": "NomeDoSeuProjeto"
+            "mainClass": "cadastroNomeacao.Main",
+            "projectName": "CONSULTORIO",
+            "cwd": "${workspaceFolder}/bin"
         }
     ]
 }

@@ -1,19 +1,16 @@
 package cadastroNomeacao;
 
 public class Atendente extends Consultorio {
-    private int num_identificacao;
-    private boolean trabalho_em_casa;
+    private int numIdentificacao;
+    private boolean trabalhoEmCasa;
 
-    public Atendente(int num_identificacao, boolean trabalho_em_casa, String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone) {
+    public Atendente(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone, int numIdentificacao, boolean trabalhoEmCasa) {
         super(nome, cpf, idade, emailPessoal, endereco, telefone);
-        this.num_identificacao = num_identificacao;
-        this.trabalho_em_casa = trabalho_em_casa;
+        this.numIdentificacao = numIdentificacao;
+        this.trabalhoEmCasa = trabalhoEmCasa;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
+    @Override
     public void consulta(Consultorio consultorio) {
         if (consultorio instanceof Paciente) {
             Paciente paciente = (Paciente) consultorio;
@@ -24,5 +21,10 @@ public class Atendente extends Consultorio {
         } else {
             System.out.println("Consulta inválida.");
         }
+    }
+
+    @Override
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

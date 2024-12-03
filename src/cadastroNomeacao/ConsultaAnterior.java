@@ -6,10 +6,18 @@ public class ConsultaAnterior {
     private boolean estavaDoente;
     private String doenca;
 
-    public ConsultaAnterior(String data, String nomeMedico, boolean estavaDoente, String doenca){
+    public ConsultaAnterior(String data, String nomeMedico, boolean estavaDoente, String doenca) {
         this.data = data;
         this.nomeMedico = nomeMedico;
         this.estavaDoente = estavaDoente;
         this.doenca = doenca;
+    }
+
+    @Override
+    public String toString() {
+        return "Data: " + data +
+                ", Médico: " + nomeMedico +
+                ", Estava doente: " + estavaDoente +
+                ", Doença: " + doenca;
     }
 }

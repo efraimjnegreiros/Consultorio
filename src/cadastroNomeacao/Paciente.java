@@ -3,53 +3,30 @@ package cadastroNomeacao;
 import java.util.ArrayList;
 import java.util.List;
 
-// Se trata de uma agregação porque é parte do histórico do paciente e não é tão essencial em uma consulta
 public class Paciente extends Consultorio {
-    private String num_CNS;
+    private int numCNS;
     private String doenca;
-    private float tempo_doenca;
-    private boolean direito_teleconsulta;
+    private String tempoDoenca;
+    private boolean direitoTeleconsulta;
     private List<ConsultaAnterior> consultasAnteriores;
 
-    public Paciente(String num_CNS, String doenca, float tempo_doenca, boolean direito_teleconsulta, String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone) {
+    public Paciente(String nome, String cpf, int idade, String emailPessoal, String endereco, String telefone, int numCNS, String doenca, String tempoDoenca, boolean direitoTeleconsulta) {
         super(nome, cpf, idade, emailPessoal, endereco, telefone);
-        this.num_CNS = num_CNS;
+        this.numCNS = numCNS;
         this.doenca = doenca;
-        this.tempo_doenca = tempo_doenca;
-        this.direito_teleconsulta = direito_teleconsulta;
+        this.tempoDoenca = tempoDoenca;
+        this.direitoTeleconsulta = direitoTeleconsulta;
         this.consultasAnteriores = new ArrayList<>();
     }
 
-    public String getNum_CNS() {
-        return this.num_CNS;
-    }
-
-    public void setNum_CNS(String num_CNS) {
-        this.num_CNS = num_CNS;
-    }
-
-    public String getDoenca() {
-        return this.doenca;
-    }
-
-    public void setDoenca(String doenca) {
-        this.doenca = doenca;
-    }
-
-    public float getTempo_doenca() {
-        return this.tempo_doenca;
-    }
-
-    public void setTempo_doenca(float tempo_doenca) {
-        this.tempo_doenca = tempo_doenca;
-    }
-
-    public boolean isDireito_teleconsulta() {
-        return this.direito_teleconsulta;
-    }
-
-    public void setDireito_teleconsulta(boolean direito_teleconsulta) {
-        this.direito_teleconsulta = direito_teleconsulta;
+    @Override
+    public void consulta(Consultorio consultorio) {
+        if (consultorio instanceof Medico) {
+            Medico medico = (Medico) consultorio;
+            System.out.println("Paciente " + this.getNome() + " está sendo atendido pelo médico " + medico.getNome());
+        } else {
+            System.out.println("Consulta inválida.");
+        }
     }
 
     @Override
@@ -57,30 +34,51 @@ public class Paciente extends Consultorio {
         this.telefone = telefone;
     }
 
-    @Override
-    public void consulta(Consultorio consultorio) {
-        System.out.println("Consulta realizada pelo Paciente: " + this.getNome());
-        // Adicione lógica de consulta aqui, se necessário
-    }
-
-    public void adicionarConsultaAnterior(String data, String nomeMedico, boolean estavaDoente, String doenca) {
-        this.consultasAnteriores.add(new ConsultaAnterior(data, nomeMedico, estavaDoente, doenca));
-    }
-
-    public List<ConsultaAnterior> getConsultasAnteriores() {
-        return this.consultasAnteriores;
+    public void adicionarConsultaAnterior(ConsultaAnterior consulta) {
+        this.consultasAnteriores.add(consulta);
     }
 
     public void listarConsultasAnteriores() {
-        System.out.println("Consultas anteriores do paciente " + this.getNome() + ":");
-        for (ConsultaAnterior consulta : consultasAnteriores) {
-            System.out.println(consulta);
+        if (consultasAnteriores.isEmpty()) {
+            System.out.println("Este paciente não tem consultas anteriores registradas.");
+        } else {
+            System.out.println("Consultas anteriores do paciente " + this.getNome() + ":");
+            for (ConsultaAnterior consulta : consultasAnteriores) {
+                System.out.println(consulta);
+            }
         }
     }
 
-        @Override
-        public String toString() {
-            return "Data: " + data + ", Médico: " + nomeMedico + ", Estava doente: " + estavaDoente + ", Doença: " + doenca;
-        }
+    // Getters e setters
+    public int getNumCNS() {
+        return numCNS;
+    }
+
+    public void setNumCNS(int numCNS) {
+        this.numCNS = numCNS;
+    }
+
+    public String getDoenca() {
+        return doenca;
+    }
+
+    public void setDoenca(String doenca) {
+        this.doenca = doenca;
+    }
+
+    public String getTempoDoenca() {
+        return tempoDoenca;
+    }
+
+    public void setTempoDoenca(String tempoDoenca) {
+        this.tempoDoenca = tempoDoenca;
+    }
+
+    public boolean isDireitoTeleconsulta() {
+        return direitoTeleconsulta;
+    }
+
+    public void setDireitoTeleconsulta(boolean direitoTeleconsulta) {
+        this.direitoTeleconsulta = direitoTeleconsulta;
     }
 }
