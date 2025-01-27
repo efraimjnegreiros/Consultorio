@@ -9,7 +9,7 @@ public class main {
     private static List<Medico> medicos = new ArrayList<>();
     private static List<Atendente> atendentes = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void cadastroNomeacao(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -150,7 +150,7 @@ public class main {
         System.out.println("Médico adicionado com sucesso!");
     }
 
-    public static void adicionarAtendente(Scanner scanner) {
+  public static void adicionarAtendente(Scanner scanner) {
         System.out.println("Digite o nome do atendente:");
         String nome = scanner.nextLine();
 
@@ -177,8 +177,10 @@ public class main {
         boolean trabalhoEmCasa = scanner.nextBoolean();
         scanner.nextLine();
 
+        // Criação do objeto Atendente
         Atendente atendente = new Atendente(nome, cpf, idade, emailPessoal, endereco, telefone, numIdentificacao, trabalhoEmCasa);
         atendentes.add(atendente);
+
         System.out.println("Atendente adicionado com sucesso!");
     }
 }
