@@ -12,7 +12,11 @@
                 <th>CPF</th>
                 <th>Idade</th>
                 <th>Email</th>
-                <th>...</th>
+                <th>Telefone</th>
+                <th>CNS</th>
+                <th>Doença</th>
+                <th>Tempo Doença</th>
+                <th>Teleconsulta</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +25,11 @@
                 <td th:text="${paciente.cpf}"></td>
                 <td th:text="${paciente.idade}"></td>
                 <td th:text="${paciente.emailPessoal}"></td>
-                <td>...</td>
+                <td th:text="${paciente.telefone}"></td>
+                <td th:text="${paciente.numCNS}"></td>
+                <td th:text="${paciente.doenca}"></td>
+                <td th:text="${paciente.tempoDoenca}"></td>
+                <td th:text="${paciente.direitoTeleconsulta}"></td>
             </tr>
         </tbody>
     </table>
@@ -39,6 +47,24 @@
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone"><br>
+
+        <label for="cns">CNS:</label>
+        <input type="text" id="cns" name="numCNS"><br>
+
+        <label for="doenca">Doença:</label>
+        <input type="text" id="doenca" name="doenca"><br>
+
+        <label for="tempoDoenca">Tempo Doença:</label>
+        <input type="text" id="tempoDoenca" name="tempoDoenca"><br>
+
+        <label for="teleconsulta">Teleconsulta:</label>
+        <select id="teleconsulta" name="direitoTeleconsulta">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select><br>
 
         <button type="submit">Salvar</button>
     </form>
