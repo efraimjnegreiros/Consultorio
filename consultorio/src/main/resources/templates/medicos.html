@@ -12,9 +12,12 @@
                 <th>CPF</th>
                 <th>Idade</th>
                 <th>Email</th>
+                <th>Telefone</th>
                 <th>CRM</th>
                 <th>Especialidade</th>
-                <th>...</th>
+                <th>Universidade</th>
+                <th>Curso</th>
+                <th>Artigo</th>
             </tr>
         </thead>
         <tbody>
@@ -23,9 +26,12 @@
                 <td th:text="${medico.cpf}"></td>
                 <td th:text="${medico.idade}"></td>
                 <td th:text="${medico.emailPessoal}"></td>
+                <td th:text="${medico.telefone}"></td>
                 <td th:text="${medico.crmUf}"></td>
                 <td th:text="${medico.especialidade}"></td>
-                <td>...</td>
+                <td th:text="${medico.formacao.universidade}"></td>
+                <td th:text="${medico.formacao.curso}"></td>
+                <td th:text="${medico.formacao.apresentouArtigo}"></td>
             </tr>
         </tbody>
     </table>
@@ -44,11 +50,26 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br>
 
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone"><br>
+
         <label for="crm">CRM:</label>
-        <input type="text" id="crm" name="crm"><br>
+        <input type="text" id="crm" name="crmUf"><br>
 
         <label for="especialidade">Especialidade:</label>
         <input type="text" id="especialidade" name="especialidade"><br>
+
+        <label for="universidade">Universidade:</label>
+        <input type="text" id="universidade" name="formacao.universidade"><br>
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="formacao.curso"><br>
+
+        <label for="artigo">Artigo:</label>
+        <select id="artigo" name="formacao.apresentouArtigo">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select><br>
 
         <button type="submit">Salvar</button>
     </form>
