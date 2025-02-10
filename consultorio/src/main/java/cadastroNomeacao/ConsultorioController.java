@@ -19,16 +19,16 @@ public class ConsultorioController {
         return "index";
     }
 
-    @GetMapping("/pacientes")
+    @GetMapping("/cadastro_paciente")
     public String listarPacientes(Model model) {
         model.addAttribute("pacientes", pacientes);
         return "pacientes";
     }
 
-    @PostMapping("/pacientes")
+    @PostMapping("/cadastro_paciente")
     public String adicionarPaciente(Paciente paciente) {
         pacientes.add(paciente);
-        return "redirect:/pacientes";
+        return "redirect:/cadastro_paciente";
     }
 
     @GetMapping("/medicos")
